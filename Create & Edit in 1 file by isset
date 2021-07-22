@@ -44,7 +44,7 @@
     </div>
     <div class="row">
         <div class="col-md-6 offset-3 pt-3">
-            <form action="{{(@$EditData)?route('divisions.edit',$EditData->id):route('divisions.store')}} " method="POST" enctype="multipart/form-data">
+            <form action="{{(@$EditData)?route('divisions.update',$EditData->id):route('divisions.store')}} " method="POST" enctype="multipart/form-data">
                 @csrf
 
                 @if ($errors->any())
