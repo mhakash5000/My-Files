@@ -1,5 +1,7 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+ {{-- put it top in master page--}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
+ {{-- put it bellow in master page --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
     @if(Session::has('success'))
@@ -7,5 +9,5 @@
     @endif
 </script>
 
-//type it in controller
+ {{-- put it in controller --}}
 Session::flash('success','Post Created Successfully');
