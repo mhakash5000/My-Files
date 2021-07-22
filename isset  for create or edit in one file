@@ -1,0 +1,5 @@
+   @if(@$DivisionEdit)
+    Edit Division
+    @else
+    Create Division
+    @endif
