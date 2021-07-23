@@ -1,0 +1,17 @@
+   <tbody>
+          @foreach($allData as $key=> $item)
+          @php
+          $MyId=App\Model\Division::where('id',$item->id)->count();
+          @endphp
+          <tr>
+              <td>{{$key+1}}</td>
+              <td>{{$item->name}}</td>
+              <td>
+                  <a href="{{route('divisions.edit',$item->id)}}" class="btn btn-warning" title="Edit"><i class="fa fa-user-edit"></i></a>
+                  @if($MyId<1)
+                  <a href="{{route('divisions.destroy',$item->id)}} " id="delete" class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i></a>
+                  @endif
+              </td>
+          </tr>
+          @endforeach
+  </tbody>
