@@ -1,0 +1,45 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+//without ajax cdn code will work also if it needs this cdn in Up.
+{{-- data pass in Selected value by ajax --}}
+  //put it in master.blade.php 
+<script type="text/javascript">
+    $(function(){
+        $(document).on('change','#division_id',function(){
+            var division_id=$(this).val();
+            $.ajax({
+                type:"GET",
+                url:"{{route('default.get-district')}}",
+                data:{division_id:division_id},
+                success:function(data){
+                    var html='<option value="">Select District</option>';
+                    $.each(data,function(key,v){
+                        html +='<option value="'+v.id+'">'+v.name+'</option>';
+                    });
+                    $('#district_id').html(html);
+                }
+            });
+        });
+    });
+</script>
+
+// default route start from here
+Route::get('/get-district','Backend\DefaultController@district')->name('default.get-district');
+});
+
+
+//controler
+use App\Http\Controllers\Controller;
+use App\Model\District;
+use Illuminate\Http\Request;
+
+class DefaultController extends Controller
+{
+    public function district(Request $request){
+
+        $division_id=$request->division_id;
+        $districtData=District::where('division_id',$division_id)->get();
+         return response()->json($districtData);
+        }
+}
