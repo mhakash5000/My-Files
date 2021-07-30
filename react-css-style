@@ -1,0 +1,32 @@
+//inline css
+
+ <div>
+     <h1 style={{backgroundColor:"red",padding:"25px",textAlign:"center"}}>Welcome to React World</h1>
+ </div>
+
+
+
+
+//internal css by object
+
+const myValue={
+        backgroundColor:"red",
+        padding:"25px",
+        marginTop:"50px"
+    }
+
+        <div>
+            <h1 style={myValue}>Welcome to React World</h1>
+        </div>
+
+//external css by class
+
+.my-value{
+  background-color: #f50000;
+  padding: 25px;
+  text-align:center;
+  
+}
+  <div>
+       <h1 className="my-value">Welcome to React World</h1>
+  </div>
