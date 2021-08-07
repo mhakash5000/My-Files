@@ -3,7 +3,6 @@
 
 //without ajax cdn code will work also if it needs this cdn in Up.
 {{-- data pass in Selected value by ajax --}}
-  //put it in master.blade.php 
 <script type="text/javascript">
     $(function(){
         $(document).on('change','#division_id',function(){
@@ -18,11 +17,30 @@
                         html +='<option value="'+v.id+'">'+v.name+'</option>';
                     });
                     $('#district_id').html(html);
+                    var district_id="{{@$EditData->district_id}}";
+                    if(district_id !=''){
+                        $('#district_id').val(district_id);
+                    }
+
                 }
             });
         });
     });
 </script>
+
+
+
+//for edit division
+<script type="text/javascript">
+ $(function(){
+    var division_id="{{@$EditData->division_id}}";
+    if(division_id){
+        $('#division_id').val(division_id).trigger('change');
+  }
+ });
+</script>
+
+
 
 // default route start from here
 Route::get('/get-district','Backend\DefaultController@district')->name('default.get-district');
