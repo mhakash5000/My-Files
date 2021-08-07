@@ -19,7 +19,7 @@
                     $('#district_id').html(html);
                     var district_id="{{@$EditData->district_id}}";
                     if(district_id !=''){
-                        $('#district_id').val(district_id);
+                        $('#district_id').val(district_id).trigger('change');
                     }
 
                 }
