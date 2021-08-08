@@ -1,0 +1,46 @@
+1) What is Laravel?
+Laravel is an open-source PHP framework. It has MVC architectural pattern.
+
+2) What is the latest Laravel version?
+The latest Laravel version is version 8, which was released on September 8th, 2020.
+
+3) Define composer?
+এটি পিএইচপির একটি অ্যাপ্লিকেশন প্যাকেজ ম্যানেজার। এটি পিএইচপি সফটওয়্যার dependencies and libraries প্রদান করে।
+
+4) What is HTTP middleware?
+HTTP মিডলওয়্যার হল HTTP requests করার একটি কৌশল।  মিডলওয়্যার  checks application user  authenticated কিনা।
+
+5) Name aggregates methods of query builder.
+Aggregates methods of query builder are: 1) max(), 2) min(), 3) sum(), 4) avg(), and 5) count().
+
+6) What is a Route?
+একটি রুট মূলত একটি URI (Uniform Resource Identifier) দ্বারা নির্দিষ্ট একটি endpoint এটি লারাভেল অ্যাপ্লিকেশনে পয়েন্টার হিসেবে কাজ করে।
+
+7) Why use Route?
+
+8) What do you mean by bundles?
+লারাভেলে, বান্ডেলগুলিকে প্যাকেজ হিসাবে উল্লেখ করা হয়। এই প্যাকেজগুলি লারাভেলের কার্যকারিতা বাড়াতে ব্যবহৃত হয়। একটি প্যাকেজে ভিউ, কনফিগারেশন, মাইগ্রেশন, রুট এবং টাস্ক থাকতে পারে।
+
+9) Explain important directories used in a common Laravel application.
+
+App/: এটি একটি সোর্স ফোল্ডার যেখানে আমাদের অ্যাপ্লিকেশন কোড থাকে। সমস্ত controllers, policies এবং মডেল এই ফোল্ডারের ভিতরে রয়েছে। 
+Config/: অ্যাপের কনফিগারেশন ফাইল ধরে রাখে। এগুলি সাধারণত সরাসরি সংশোধন করা হয় না বরং পরিবর্তে, অ্যাপের মূলে .env ফাইলে সেট করা মানগুলির উপর নির্ভর করে।
+Database/:database files, including migrations, seeds, and test factories ফাইল রাখে।
+Public/: পাবলিকলি অ্যাক্সেসযোগ্য ফোল্ডার যা কম্পাইল করা (assets/সম্পদ) ধারণ করে এবং এটি একটি index.php ফাইল।
+
+10) What is a Controller?
+ controller  হল "MVC" (Model-View-Controller) আর্কিটেকচার যা Laravel এর উপর ভিত্তি করে তৈরি। এটি ভিউ এবং মডেলের মধ্যে একটি নির্দেশক হিসাবে কাজ করে।
+ 
+ 11) Explain reverse routing in Laravel?
+রিভার্স রাউটিং হল একটি  method যেটি  symbol বা নামের উপর ভিত্তি করেে URL তৈরির একটি পদ্ধতি। এটি আপনার Laravel অ্যাপ্লিকেশন নমনীয় করে তোলে।
+
+12) Explain traits in Laravel?
+Laravel traits হল ফাংশনের একটি group  যা আপনি অন্য  class মধ্যে include  করা  একটি abstract class মত। আপনি সরাসরি তাত্ক্ষণিক করতে পারবেন না, তবে এর পদ্ধতিগুলি কনক্রিট ক্লাসে ব্যবহার করা যেতে পারে।
+13)no need
+
+
+14) How will you register service providers?
+register service providers এর  config/app.php কনফিগারেশন ফাইলে provide করা হয় যেখানে একটি Array রয়েছে যেখানে  service provider class name উল্লেখ করা হয়।
+
+15) Where will you define Laravel's Facades?
+All Laravel facades defined  করা হয় Illuminate\Support\Facades namespace.
