@@ -43,4 +43,11 @@ Laravel traits হল ফাংশনের একটি group  যা আপন
 register service providers এর  config/app.php কনফিগারেশন ফাইলে provide করা হয় যেখানে একটি Array রয়েছে যেখানে  service provider class name উল্লেখ করা হয়।
 
 15) Where will you define Laravel's Facades?
-All Laravel facades defined  করা হয় Illuminate\Support\Facades namespace.
+All Laravel facades defined করা হয় Illuminate\Support\Facades namespace.
+
+28) Name databases supported by Laravel?
+Laravel supports databases:
+PostgreSQL
+SQL Server
+SQLite
+MySQL
