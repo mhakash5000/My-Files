@@ -48,6 +48,14 @@ All Laravel facades defined করা হয় Illuminate\Support\Facades namespac
 16) State the difference between get and post method.
 Get method allows to send a limited amount of data in the header. Post allows you to send a large amount of data in the body.
 
+18) What is service container in Laravel?
+সার্ভিস কন্টেইনার হল লারাভেলে dependency ইনজেকশন করার জন্য ব্যবহৃত একটি টুল।
+
+19) How can you enable query log in Laravel?
+Laravel এ query log enable করতে EnableQueryLog method ব্যবহার করতে হয়।
+
+
+
 28) Name databases supported by Laravel?
 Laravel supports databases:
 PostgreSQL
