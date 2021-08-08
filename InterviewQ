@@ -45,6 +45,9 @@ register service providers এর  config/app.php কনফিগারেশন
 15) Where will you define Laravel's Facades?
 All Laravel facades defined করা হয় Illuminate\Support\Facades namespace.
 
+16) State the difference between get and post method.
+Get method allows to send a limited amount of data in the header. Post allows you to send a large amount of data in the body.
+
 28) Name databases supported by Laravel?
 Laravel supports databases:
 PostgreSQL
