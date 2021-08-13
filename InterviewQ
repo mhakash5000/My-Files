@@ -54,6 +54,8 @@ Get method allows to send a limited amount of data in the header. Post allows yo
 19) How can you enable query log in Laravel?
 Laravel এ query log enable করতে EnableQueryLog method ব্যবহার করতে হয়।
 
+1) Explain dependency injection and their types.
+ এটি একটি technique যেটি এক object থেকে  অন্য object dependent করে . There are three types of dependency injection: 1) Constructor injection, 2) setter injection, and 3) interface injection.
 
 
 28) Name databases supported by Laravel?
