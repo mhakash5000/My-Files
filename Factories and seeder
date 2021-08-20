@@ -8,6 +8,14 @@ php artisan make:factory PostFactory
         ];
     }
     
-    
+ 
+
+//seeder in seeders at DatabaseSeeder.php
+
+ public function run()
+ {
+     // \App\Models\User::factory(10)->create();
+      \App\Models\Post::factory(20)->create();
+ }
 //for create seeder
 php artisan make db:seed
