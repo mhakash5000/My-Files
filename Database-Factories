@@ -1,9 +1,0 @@
-php artisan make:factory PostFactory
-
- public function definition()
-    {
-        return [
-            'title'=>$this->faker->text(50);
-            'body'=>$this->faker->text(300);
-        ];
-    }
