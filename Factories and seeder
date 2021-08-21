@@ -1,5 +1,5 @@
-php artisan make:factory PostFactory
 
+php artisan make:factory DeviceFactory
  public function definition()
     {
         return [
@@ -18,4 +18,4 @@ php artisan make:factory PostFactory
       \App\Models\Post::factory(20)->create();
  }
 //for create seeder
-php artisan make db:seed
+php artisan db:seed
