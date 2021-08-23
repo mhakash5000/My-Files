@@ -1,0 +1,16 @@
+in Header put this code
+
+key                     value
+Content-Type       application/json
+Accept             application/json
+
+in body put your value
+set this one -> x-www-from-urlencoded
+key             value
+class_name       one
+
+Method
+get
+post ->store
+patch-> update
+delete
