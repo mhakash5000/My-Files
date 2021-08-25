@@ -54,13 +54,46 @@ Get method allows to send a limited amount of data in the header. Post allows yo
 19) How can you enable query log in Laravel?
 Laravel এ query log enable করতে EnableQueryLog method ব্যবহার করতে হয়।
 
-1) Explain dependency injection and their types.
+20) Explain the concept of events in Laravel.
+একটি ইভেন্ট হল একটি occurrence  বা action  যা লারাভেল অ্যাপ্লিকেশনে ঘটে যাওয়া ইভেন্টগুলি সাবস্ক্রাইব করতে এবং শুনতে সহায়তা করে। কিছু event লারাভেল দ্বারা স্বয়ংক্রিয়ভাবে বহিস্কার করা হয় যখন কোন activity  ঘটে
+
+21) Explain dependency injection and their types.
  এটি একটি technique যেটি এক object থেকে  অন্য object dependent করে . There are three types of dependency injection: 1) Constructor injection, 2) setter injection, and 3) interface injection.
 
+22) What are the advantages of using Laravel?
+*Laravel- এর ব্লেড টেমপ্লেট ইঞ্জিন আছে ডায়নামিক লেআউট তৈরি করতে এবং কম্পাইলিং টাস্ক বাড়ানোর জন্য।
+*কোনও ঝামেলা ছাড়াই কোডটি পুনরায় ব্যবহার করুন।
+*লারাভেল আপনাকে একটি উন্নত ক্যোয়ারী নির্মাতা প্রক্রিয়া ব্যবহার করে Multiple DBM অবজেক্টের মধ্যে সীমাবদ্ধতা প্রয়োগ করতে প্রদান করে।
+*লারাভেল  LOC container ব্যবহার করে নতুন tools  তৈরি করতে help করে
+*MVC pattern 
+
+23) Explain validation concept in Laravel.
+
+Validations are an important concept while designing any Laravel application. It ensures that the data is always in an expected format before it stores into the database. Laravel provides many ways to validate your data.
+Base controller trait uses a ValidatesRequests class which provides a useful method to validate requests coming from the client machine.
+
+24) What does ORM stand for?
+ORM stands for Object Relational Mapping
+
+25) How can you reduce memory usage in Laravel?
+ large amount of data প্রক্রিয়াকরণের সময়, মেমরির ব্যবহার কমাতে আপনি কার্সার method  ব্যবহার করতে পারেন।
+ 
+26) List available types of relationships in Laravel Eloquent.
+Types of relationship in Laravel Eloquent are: 1) One To One 2) One To Many 3) Many To Many 4) Has Many Through, and 5) Polymorphic Relations.
+
+27) Name the Template Engine utilized by Laravel.
+Blade is a powerful template engine utilized by Laravel.
 
 28) Name databases supported by Laravel?
 Laravel supports databases:
 PostgreSQL
 SQL Server
 SQLite
+
+29) Why are migrations important?
+Migrations are important because it allows you to share application by maintaining database consistency. Without migration, it is difficult to share any Laravel application. It also allows you to sync database.
+
+30) Define Lumen
+Lumen is a micro-framework. It is a smaller, and faster, version of a building Laravel based services, and REST API's.
 MySQL
+
