@@ -97,3 +97,6 @@ Migrations are important because it allows you to share application by maintaini
 Lumen is a micro-framework. It is a smaller, and faster, version of a building Laravel based services, and REST API's.
 MySQL
 
+31) Explain PHP artisan
+ artisan is লারাভেলের একটি কমান্ড-লাইন টুল। এটি এমন কমান্ড সরবরাহ করে যা আপনাকে কোনও ঝামেলা ছাড়াই লারাভেল অ্যাপ্লিকেশন তৈরি করতে সহায়তা করে।
+
