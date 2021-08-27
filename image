@@ -1,18 +1,6 @@
 1. User image Upload and show for Autenticate User by user this command "php artisan storage:link"
 ***<img src="{{asset('/storage/images/'.Auth::user()->avatar)}}" width="50px; heigth:50px">***
 
- public function UpdateImage(Request $request){
-
-        if($request->hasFile('image')){
-            $filename=($request->image->getClientOriginalName());
-            $request->image->storeAs('images',$filename,'public');
-            User::find(1)->update(['avatar'=>$filename]);
-        }
-        return redirect()->back();
-
-    }
-
-
 
 0.
 <!-- Image Show Before Upload Start -->
@@ -52,3 +40,38 @@
  <img src="{{(!empty($productsEdit->image))?url('public/upload/user_images/'.$productsEdit->image):url('public/upload/user_images')}} " id="image" style="width:445px;height:200px">
  <input id="my-input" class="form-control" type="file" name="image" id="file" onchange="showImage(this,'image')" value=''>
                   
+//for image unlink
+public function destroy($id)
+    {
+        //By DB Table
+        $img=DB::table('students')->where('id',$id)->first();
+        $img_path=$img->image;
+
+        unlink($img_path);
+        DB::table('students')->where('id',$id)->delete();
+        return response("Student Delete Successfully");
+
+        //By model
+        // $DeleteStudentImg=Student::find($id);
+        // if(file_exists('public/image/student_images/'.$DeleteStudentImg->image)AND ! empty($DeleteStudentImg->image))
+        // {
+        //  unlink('public/image/student_images/'.$DeleteStudentImg->image);
+        // }
+        // Student::where('id',$DeleteStudentImg->id)->delete();
+        // $DeleteStudentImg->delete();
+        // return response("Student Delete Successfully");
+   
+    }
+
+
+    public function UpdateImage(Request $request){
+
+           if($request->hasFile('image')){
+               $filename=($request->image->getClientOriginalName());
+               $request->image->storeAs('images',$filename,'public');
+               User::find(1)->update(['avatar'=>$filename]);
+           }
+           return redirect()->back();
+
+       }
+
