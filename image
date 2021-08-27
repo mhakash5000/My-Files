@@ -2,7 +2,18 @@
 ***<img src="{{asset('/storage/images/'.Auth::user()->avatar)}}" width="50px; heigth:50px">***
 
 
-0.
+1.
+  public function UpdateImage(Request $request){
+
+           if($request->hasFile('image')){
+               $filename=($request->image->getClientOriginalName());
+               $request->image->storeAs('images',$filename,'public');
+               User::find(1)->update(['avatar'=>$filename]);
+           }
+           return redirect()->back();
+
+       }
+       
 <!-- Image Show Before Upload Start -->
 <script>
     $(document).ready(function(){
@@ -39,8 +50,11 @@
 //image create and update in create page
  <img src="{{(!empty($productsEdit->image))?url('public/upload/user_images/'.$productsEdit->image):url('public/upload/user_images')}} " id="image" style="width:445px;height:200px">
  <input id="my-input" class="form-control" type="file" name="image" id="file" onchange="showImage(this,'image')" value=''>
-                  
+   
+   
+2.   
 //for image unlink
+
 public function destroy($id)
     {
         //By DB Table
@@ -64,14 +78,5 @@ public function destroy($id)
     }
 
 
-    public function UpdateImage(Request $request){
-
-           if($request->hasFile('image')){
-               $filename=($request->image->getClientOriginalName());
-               $request->image->storeAs('images',$filename,'public');
-               User::find(1)->update(['avatar'=>$filename]);
-           }
-           return redirect()->back();
-
-       }
+  
 
