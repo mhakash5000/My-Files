@@ -1,0 +1,13 @@
+
+jwt token হচ্ছে Clint যখন authenticate করে তখন server সব information session log এ save করে coresponedent session id customer কে না পাঠিয়ে সে
+ইউজারের সমস্ত information json আকারে টোকেন হিসাবে পাঠিয়ে দেয় এবং সেই সাথে সাইনও করে দেয়। clind এরপরের  request এর সাথে সমপূর্ণ টোকেনটা পাঠিয়ে দেয়
+যেখানে লেখা আছে সে কোন ইউজার তার নাম কি etc. server এ ক্ষেত্রে কিছু save করেনা সব ক্লান্টের কাছে থাকে। everytime clint যখন টোকেন সহ request করে 
+সার্ভার বুঝতে পারে এটা কোন ইউজার তারপর তার প্রয়োজনীয় ডাটা serve করে। এ token টা কোন id না এটা একটা json object with all information. it is jwt token.
+
+Three part of jwt token:
+1. Header -> header part হচ্ছে indivisual json
+2. Payload -> Payload part হচ্ছে indivisual json
+3. Singature -> Singature হচ্ছে Hash String যে ডাটা থাকে ঐ ডাটাকে  একটা sectet key দিয়ে Hash করে singature তৈরি করে। 
+
+
+json web token(jwt) হচ্ছে kind of user identity. যে টা দেখে server বোঝতে পারে user valid or not.
