@@ -3,7 +3,7 @@ php artisan tinker
 $user = new User;
 $user->name("akash");
 $user->email("mhakash5000@gmail.com");
-$user->password=Hase::make("1234");
+$user->password = Hash::make('password');
 $user->save()
 
 //another way
