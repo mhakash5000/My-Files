@@ -3,7 +3,7 @@ in Header put this code
 key                     value
 Content-Type       application/json
 Accept             application/json
-
+Authorization      bearer (put jwt token here no need " ") //this line only for login athentication add value one
 in body put your value
 set this one -> x-www-from-urlencoded
 key             value
