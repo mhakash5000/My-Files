@@ -4,12 +4,12 @@ $user = new User;
 $user->name("akash");
 $user->email("mhakash5000@gmail.com");
 $user->password = Hash::make('password');
-$user->save()
+$user->save();
 
 //another way
 php artisan tinker
 User::create(['name'=>'Admin', 'email'=>'md@gmail.com', 'password'=>bcrypt['
-adminpass']])
+adminpass']]);
 
 
 
