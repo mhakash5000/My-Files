@@ -6,6 +6,8 @@ $user->email("mhakash5000@gmail.com");
 $user->password=Hase::make("1234");
 $user->save()
 
+//another way
+php artisan tinker
 User::create(['name'=>'Admin', 'email'=>'md@gmail.com', 'password'=>bcrypt['
 adminpass']])
 
