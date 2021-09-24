@@ -1,0 +1,18 @@
+   public function CustomerSignupStore(Request $request){
+        DB::transaction(function () use($request) {
+            $validatedData = $request->validate([
+                'name' => 'required',
+                'email' => 'required',
+                'phone' => 'required|unique:users,phone',
+                 "/^(?:\+88|01)?(?:\d{11}|\d{13})$/",
+                 //  'regex:/(^(\+8801|8801|01|008801))[1|5-9]{1}(\d){8}$/'],
+                'password'=>'min:6|required_with:confirm_password|same:confirm_password','confirm_password'=>'min:6',
+            ]);
+                
+       }    
+ }
+     <div class="form-group">
+        <label for="username" class="text-info">Email:</label><br>
+        <input type="email" name="email" id="email" class="form-control" required>
+        <font style="color:red">{{($errors->has('email'))?($errors->first('email')):''}} </font>
+    </div>
