@@ -1,13 +1,14 @@
  {{-- put it top in master page--}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
- {{-- put it bellow in master page --}}
+ {{-- put it bellow in master page AND script link and toastr.success massage put together --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
     @if(Session::has('success'))
     toastr.success("{{Session::get('success')}}");
     @endif
 </script>
+
 
  {{-- put it in controller --}}
 Session::flash('success','Post Created Successfully');
