@@ -1,6 +1,8 @@
+step-1
  {{-- put it top in master page--}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
+step-2
  {{-- put it bellow in master page AND script link and toastr.success massage put together --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
@@ -9,6 +11,6 @@
     @endif
 </script>
 
-
+step-3
  {{-- put it in controller --}}
 Session::flash('success','Post Created Successfully');
